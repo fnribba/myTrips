@@ -1,0 +1,80 @@
+.aboutUsBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.contenedorFlex { 
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+
+.hijos { 
+    margin-right: .5rem; }
+
+.hijos__flex {
+    width: 60px;
+    height: 60px; }
+
+.handpickedHotels { width: 80px;}
+
+.localizacionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    justify-items: center;
+    align-items: center;
+}
+
+.localizacionGrid__text__h5 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.localizacionGrid__text__p {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+#map {
+    width: 500px;
+    height: 400px;
+}
+
+.localizacionGrid__text__location { 
+    display: flex; 
+    justify-content: center;
+}
+
+.localizacionGrid__text__location__img {
+    width: 32px;
+    height: 40px;
+    margin-top: .7rem;
+    margin-right: .7rem;
+}
+
+.localizacionGrid__text__attention {
+    display: flex;
+    justify-content: center;
+}
+
+.localizacionGrid__text__attention__img {
+    width: 40px;
+    height: 40px;
+    margin-top: .8rem;
+    margin-right: .7rem;
+}
+
+
+
+
+
+
+
+
+
+

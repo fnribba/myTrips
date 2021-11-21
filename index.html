@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTrips</title>
+    <!--- FONTS ---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <!--- CSS ---->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- BOX ICONOS -->
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
+    <!-- ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- SEO -->
+    <meta name="keywords" content="travel, trips, flights, cheap, beaches, greece, rome, france, spain, traveler, lowcost">
+    <meta name="description" content="Spend your best holidays with myTrips">
+</head>
+        <body> 
+                <!---- HEADER ----->
+                <header>  
+                        <!---- NAV-BAR ----->
+                        <nav class="navbar">
+                            <a href="#" class="navbar__logo"><i class='bx bxs-plane-alt animate__animated animate__rotateInUpRight'></i>myTrips</a>
+                                <ul class="navbar__ul">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="./sections/destinations.html">Destinations</a></li>
+                                    <li><a href="./sections/packs.html">Packs</a></li>
+                                    <li><a href="./sections/aboutus.html">About us</a></li>
+                                    <li><a href="#">1</a></li>
+                                    
+                                </ul>
+                                <div class="toggle"></div>
+                        </nav>
+                </header>
+                <!---- MAIN ----->
+                <main class="main">
+                    <video onloadeddata="this.muted=true" autoplay loop>
+                        <source src="./pics/beach.mp4">
+                    </video>
+                    <div class="main__capa"></div>
+                        <h1 class="animate__animated animate__backInRight">Your best trips, in one place</h1>
+                        <a class="main__arrow" href="#scrollDown"><img class="main__arrow__img" src="./pics/arrow-icon.png" alt="arrow icon"></a>
+                </main>
+                <!---- PRIMER ARTICULO ----->
+                <article>
+                    <h2 id="scrollDown">The most beautiful beaches</h2>
+                    
+                    <section class="beaches"> 
+
+                        <div class="beaches__relative">
+                            <img class="beaches__relative__img" src="pics/borabora.jpg" alt="bora bora">
+                            <div class="beaches__relative__text">
+                                <h3>Bora Bora</h3>
+                                <p class="beaches__relative__country">French Polynesia</p>
+                            </div>
+                        </div>
+
+                        <div class="beaches__relative">
+                            <img class="beaches__relative__img__middle" src="pics/crimea.jpg" alt="crimea">
+                            <div class="beaches__relative__text">
+                                <h3>Crimea</h3>
+                                <p class="beaches__relative__country">Ukraine</p>
+                            </div>
+                            <a class="takeALook" href="#"><p class="takeALook__text">Take a look</p></a>
+                        </div>
+
+                        <div class="beaches__relative">
+                            <img class="beaches__relative__img" src="pics/ibiza.jpg" alt="ibiza">
+                            <div class="beaches__relative__text">
+                                <h3>Ibiza</h3>
+                                <p class="beaches__relative__country">Spain</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <!---- SEGUNDO ARTICULO ----->
+                <article>
+                    <h3 id="historicalPlacesh2">Explore historical places</h3>
+                    <!--- EMPIEZAN LOS GRIDS --->
+                    <section class="historicalPlaces">
+
+                            <div class="historicalPlaces__itemRelative historicalPlaces__egypt">
+                                <img src="./pics/egypt.jpg" alt="egypt">
+                                <div class="historicalPlaces__imgTitle">
+                                    <h4>Egypt</h4>
+                                    <a href="sections/egypt.html"><p class="historicalPlaces__buttonMoreMargin">SEE MORE</p></a> 
+                                </div>
+                            </div>    
+                        
+                            <div class="historicalPlaces__itemRelative historicalPlaces__rome">
+                                <img src="pics/rome2.jpg" alt="rome"> 
+                                <div class="historicalPlaces__imgTitle">
+                                        <h4>Italy</h4>
+                                        <a href="#"><p class="historicalPlaces__buttonMoreMargin">SEE MORE</p></a> 
+                                </div>
+                            </div>
+
+                            <div class="historicalPlaces__itemRelative historicalPlaces__turkey">
+                                <img src="pics/turkey.jpg" alt="turkey">
+                                <div class="historicalPlaces__imgTitle">
+                                    <h4>Turkey</h4>
+                                    <a href="#"><p class="historicalPlaces__buttonMoreMargin">SEE MORE</p></a> 
+                                </div>
+                            </div>
+                            
+                            <div class="historicalPlaces__itemRelative historicalPlaces__greece">
+                                <img src="pics/greece2.jpg" alt="greece">
+                                <div class="historicalPlaces__imgTitle">
+                                    <h4>Greece</h4>
+                                    <a href="#"><p>SEE MORE</p></a> 
+                                </div>
+                            </div>   
+                    </section>
+                </article>
+
+                <!---- TERCER ARTICULO ----->
+                <article class="services">
+                    <h4 id="ourServicesh2">Our services</h4>
+                    <section class="servicesContainer">
+                        <div class="containerFlex">
+                            
+                            <div class="servicesHijos">
+                                <img class="servicesHijos__img" src="./pics/hotel.png" alt="hotel">
+                                <h4>Affordable Hotels</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                            </div>
+    
+                            <div class="servicesHijos">
+                                <img class="servicesHijos__img" src="./pics/cubiertos.png" alt="food">
+                                <h4>Food and drinks</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                            </div>
+    
+                            <div class="servicesHijos">
+                                <img class="servicesHijos__img" src="./pics/insurance.png" alt="insurance">
+                                <h4>Travel insurance</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                            </div>
+                        </div>
+
+                        <div class="containerFlex">
+                            <div class="servicesHijos">
+                                <img class="servicesHijos__img" src="./pics/world.png" alt="world">
+                                <h4>Around the world</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                            </div>
+
+                            <div class="servicesHijos">
+                                <img class="servicesHijos__img" src="./pics/travel.png" alt="travel">
+                                <h4>Fastest travel</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                            </div>
+
+                            <div class="servicesHijos">
+                                <img class="servicesHijos__img" src="./pics/excursion.png" alt="excursion">
+                                <h4>Excursions</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <!---- CUARTO ARTICULO ----->
+                <article>
+                <h5 id="reviewsh2">Reviews</h5>
+                <section class="reviews">
+                    <div class="reviews__div">
+                        <img class="reviews__img" src="./pics/circulo.png" alt="people">
+                    </div>
+                    <div class="reviews__text">
+                        <p class="reviews__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel arcu elit. Vestibulum suscipit varius metus, a consequat nisl lacinia. Lorem suscipit varius metus, a consequat nisl laciniaAliquam vel arcu elit. Vestibulum suscipit varius metus, a consequat nisl lacinia. Lorem suscipit varius metus, a consequat nisl laciniaAliquam vel arcu elit. Vestibulum suscipit varius metus, a consequat nisl lacinia. Lorem suscipit varius metus, a consequat nisl lacinia”</p>
+                    </div>
+                    <h5 class="reviews__h3">John Deo</h5>
+                </section>
+                </article>
+                <!---- NEWSLETTER ----->
+                <div class="newsletter">
+                    <div class="newsletter__content">
+                        <img class="newsletter__msg" src="./pics/msg.png" alt="icon message">
+                        <div class="newsletter__text">
+                            <h5 class="newsletter__h4">Suscribe to our newsletter</h5>
+                            <div class="newsletter__input">
+                                <input class="newsletter__input" type="text" placeholder="Enter your mail here...">
+                                <span class="newsletter__button">
+                                <a class="newsletter__a__arrow" href="#"><i class='bx bx-right-arrow-alt newsletter__arrow'></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---- FOOTER ----->
+                <footer>
+                    <div class="footer_df">
+                        <div class="footerArea">
+                            <h5 id="marginLeft">NEED HELP?</h5>
+                            <div class="footerArea__primerBloque">
+                                <img class="line" src="./pics/line.png" alt="line">
+                                <h5 class="grey">Call Us</h5>
+                                <h5 class="alignSelfEnd">+54 11 6144-0896</h5>
+                            </div>
+
+                            <div class="footerArea__primerBloque">
+                                <img class="line" src="./pics/line.png" alt="line">
+                                <h5 class="grey">Gmail</h5>
+                                <h5 class="alignSelfEnd-2">mytrips@gmail.com</h5>
+                            </div>
+
+                            <div class="footerArea__primerBloque">
+                                <img class="line" src="./pics/line.png" alt="line">
+                                <h5 class="grey">Follow Us</h5>
+                                <div class="socialNetwork">
+                                <a class="socialNetwork__icons" href="#"><i class='bx bxl-pinterest'></i></a>
+                                <a class="socialNetwork__icons" href="#"><i class='bx bxl-instagram'></i></a>
+                                <a class="socialNetwork__icons" href="#"><i class='bx bxl-youtube'></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footerArea__segundoBloque">
+                            <h5>COMPANY</h5>
+                            <a href="#"><h6 class="grey marginBottom">About us</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Community blog</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Rewards</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Work with us</h6></a>
+                        </div>
+
+                        <div class="footerArea__tercerBloque">
+                            <h5>SUPPORT</h6>
+                            <a href="#"><h6 class="grey marginBottom">Account</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Legal</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Affiliate program</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Privacy policy</h6></a>
+                        </div>
+                    </div>
+                </footer>
+                <!-- SCRIPTS -->
+                <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+                <script src="./scripts.js"></script>
+        </body>
+</html>

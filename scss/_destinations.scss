@@ -1,0 +1,188 @@
+.destinationsBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.destinationsBG-capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(48, 47, 47, 0.2);
+}
+
+.destinations__section__grid {
+    display: grid;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 400px);
+    grid-gap: 1rem;
+    justify-items: center; }
+
+.destinations__section__grid__card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: $primary-color;
+    box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
+    -webkit-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10); }
+
+.destinations__section__grid__card__img {
+    height: 200px;
+    width: 300px;
+}
+
+.destinations__section__grid__card__texticon {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    
+}
+
+.destinations__section__grid__card__texticon__h5 {
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.destinations__section__grid__card__texticon__img {
+    width: 16px;
+    height: 20px;
+    margin-right: .3rem;
+}
+
+.destinations__section__grid__card__p {
+    font-size: .8em;
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    margin-left: 1rem;
+    font-weight: 400;
+    margin-right: 1rem;
+    margin-top: .5rem;
+}
+
+.destinations__section__grid__card__stars {
+    width: 13px;
+    height: 13px;
+    display: flex;
+    margin-left: 1rem;
+    margin-top: .6rem; }
+
+.destinations__section__grid__card__stars__img {
+    margin-right: .2rem;
+}
+
+.destinations__section__grid__card__p__price {
+    display: flex;
+    justify-content: start;
+    text-align: start;
+    margin: .7rem 1rem;
+}
+
+.destinations__section__grid__card__p__price__text {
+    font-size: .8rem;
+    margin-right: .3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.destinations__section__grid__card__p__price__text2 {
+    font-size: .6rem;
+    margin-top: .1rem;
+    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.destinations__section__grid__card__btn {
+    background-color: $secondary-color;
+    width: 100px;
+    height: 28px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: .5rem;
+    border-radius: 2px;
+    transition: background-color .5s ease;
+}
+
+.destinations__section__grid__card__btn:hover {
+    background-color: #378d8f;
+}
+
+.destinations__section__grid__card__btn__text {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .7rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* BANNER DISCOUNT */
+.bannerDiscount {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to bottom right, #327e7a, #88c9c3);
+    margin-top: 1.8rem;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28); 
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+}
+
+.bannerDiscount__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px;
+    height: 150px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.bannerDiscount__text-style1 {
+    color: $primary-color;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 1rem;
+}
+
+.bannerDiscount__text-style2 {
+    color: $primary-color;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bannerDiscount__text-style3 {
+    color: $primary-color;
+    font-size: 2.5rem;
+    width: 90%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin: 0 1rem;
+
+}
+
+@media (max-width: 430px) {
+    #destinations {
+        font-size: 2.8rem;
+    }
+}

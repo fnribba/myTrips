@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTrips | About Us</title>
+     <!--- FONTS ---->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <!--- CSS ---->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- BOX ICONOS -->
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
+    <!-- ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- SEO -->
+    <meta name="keywords" content="contact, information, attention">
+    <meta name="description" content="All you need to know. Who we are, where we are.">
+    <!-- API MAP -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
+</head>
+        <body>
+                <!---- HEADER ----->
+                <header>  
+                    <!---- NAV-BAR ----->
+                    <nav class="navbar">
+                        <a href="#" class="navbar__logo"><i class='bx bxs-plane-alt animate__animated animate__rotateInUpRight'></i>myTrips</a>
+                            <ul class="navbar__ul">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="./destinations.html">Destinations</a></li>
+                                <li><a href="./packs.html">Packs</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">1</a></li>   
+                            </ul>
+                            <div class="toggle"></div>
+                    </nav>
+                </header>
+                <!---- MAIN ----->
+                <main class="main">
+                    <img src="../pics/aboutus.jpg" alt="breakfast" class="aboutUsBG">
+                    <div class="aboutUsBG-capa"></div>
+                    <h1 class="animate__animated animate__backInRight">All you need to know</h1>
+                    <div class="main__arrow"><a href="#scrollDown"><img class="main__arrow__img" src="../pics/arrow-icon.png" alt="arrow icon"></a></div>
+                </main>
+                <!---- SECTION 1 ----->
+                <section>
+                    <h2 id="scrollDown">About Us</h2>
+                    <div class="contenedorFlex">
+
+                        <div class="hijos">
+                            <img class="hijos__flex" src="../pics/clock.png" alt="clock">
+                            <h3>Attention 24HS</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                        </div>
+
+                        <div class="hijos">
+                            <img class="hijos__flex" src="../pics/world.png" alt="world">
+                            <h3>World Class Service</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                        </div>
+
+                        <div class="hijos">
+                            <img class="hijos__flex handpickedHotels" src="../pics/map.png" alt="map">
+                            <h3>Handpicked Hotels</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur elit. Integer aliquam neque sed pulvinar ultrices..</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!---- SECTION 2 ----->
+                <section>
+                    <h3 id="whereWeAre">Where we are</h3>
+                    <article class="localizacionGrid">
+
+                        <div class="localizacionGrid__text">
+
+                            <div class="localizacionGrid__text__location">
+                                <img src="../pics/gps.png" alt="location" class="localizacionGrid__text__location__img">
+                                <div>
+                                    <h4 class="localizacionGrid__text__h5">Villa Crespo</h4>
+                                    <h4 class="localizacionGrid__text__p">Avenida Corrientes 2215</h4>
+                                </div>
+                            </div>
+
+                            <div class="localizacionGrid__text__attention">
+                                <img src="../pics/clock2.png" alt="clock" class="localizacionGrid__text__attention__img">
+                                <div>
+                                    <h4 class="localizacionGrid__text__h5">Attention schedule:</h4>
+                                    <h4 class="localizacionGrid__text__p">Monday to Friday: 09:00 AM/18:00 PM</h4>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <!------------------- API MAP ---------------------------->
+                        <div id="localizacionGrid__mapContainer">
+                            <div id='map'></div>
+                        </div>
+                    </article>
+                </section>
+                <!---- NEWSLETTER ----->
+                <section class="newsletter">
+                    <div class="newsletter__content">
+                        <img class="newsletter__msg" src="../pics/msg.png" alt="message icon">
+                        <div class="newsletter__text">
+                            <h4 class="newsletter__h4">Suscribe to our newsletter</h4>
+                            <div class="newsletter__input">
+                                <input class="newsletter__input" type="text" placeholder="Enter your mail here...">
+                                <span class="newsletter__button">
+                                <a href="#"><i class='bx bx-right-arrow-alt newsletter__arrow'></i></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!---- FOOTER ----->
+                <footer>
+                    <div class="footer_df">
+                        <div class="footerArea">
+                            <h5 id="marginLeft">NEED HELP?</h5>
+                            <div class="footerArea__primerBloque">
+                                <img class="line" src="../pics/line.png" alt="line">
+                                <h5 class="grey">Call Us</h5>
+                                <h5 class="alignSelfEnd">+54 11 6144-0896</h5>
+                            </div>
+
+                            <div class="footerArea__primerBloque">
+                                <img class="line" src="../pics/line.png" alt="line">
+                                <h5 class="grey">Gmail</h5>
+                                <h5 class="alignSelfEnd-2">mytrips@gmail.com</h5>
+                            </div>
+
+                            <div class="footerArea__primerBloque">
+                                <img class="line" src="../pics/line.png" alt="line">
+                                <h5 class="grey">Follow Us</h5>
+                                <div class="socialNetwork">
+                                <a class="socialNetwork__icons" href="#"><i class='bx bxl-pinterest'></i></a>
+                                <a class="socialNetwork__icons" href="#"><i class='bx bxl-instagram'></i></a>
+                                <a class="socialNetwork__icons" href="#"><i class='bx bxl-youtube'></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footerArea__segundoBloque">
+                            <h5>COMPANY</h5>
+                            <a href="#"><h6 class="grey marginBottom">About us</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Community blog</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Rewards</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Work with us</h6></a>
+                        </div>
+
+                        <div class="footerArea__tercerBloque">
+                            <h5>SUPPORT</h6>
+                            <a href="#"><h6 class="grey marginBottom">Account</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Legal</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Affiliate program</h6></a>
+                            <a href="#"><h6 class="grey marginBottom">Privacy policy</h6></a>
+                        </div>
+                    </div>
+                </footer>
+
+                <!---- SCRIPTS ----->
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoiaWN5cGVyIiwiYSI6ImNrc3U4dGpleDFkcm8zMHBvb2hzaHNhbDYifQ.iy3_rpCBxpZQtfaa-jEXEw';
+                    var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [-58.4431949, -34.5956145],
+                    zoom: 12
+                    });
+
+                    const marker1 = new mapboxgl.Marker({ color: 'black' })
+                    .setLngLat([-58.4431949, -34.5956145])
+                    .addTo(map);
+                </script>
+                <script src="../scripts.js"></script>
+        </body>
+</html>

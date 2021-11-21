@@ -1,0 +1,46 @@
+    .romeMain__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    object-fit: cover; }
+
+    .romeMain__bg-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(48, 47, 47, 0.2);
+    }
+
+    .romeMain__h2 {
+    font-size: 5em;
+    font-weight: 600;
+    color: $primary-color;
+    text-align: start;
+    margin-left: 2rem;
+    margin-bottom: 0px;
+    -webkit-text-stroke-width: .4px;
+    -webkit-text-stroke-color: black;
+    display: flex;
+    justify-content: start;
+    margin-top: 8rem;
+    }
+
+    .romeMain__p {
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    color: $primary-color;
+    text-align: start;
+    margin-left: 2rem;
+    }
+
+
+    .logoRome, .navbar__ul__li, .toggleRome {
+    color: $primary-color; 
+    font-weight: 500; }
