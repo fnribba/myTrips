@@ -238,6 +238,22 @@ li:last-child {
   position: absolute;
   display: none; }
 
+.indexBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh; }
+
+.indexBG-capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 47, 47, 0.3); }
+
 /* PRIMER ARTICULO */
 .beaches {
   display: flex;
