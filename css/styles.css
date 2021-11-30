@@ -9,6 +9,23 @@ html {
   scroll-behavior: smooth; }
 
 /* VARIABLES */
+/* EXTEND */
+.titleCenter, h2, #historicalPlacesh2, #ourServicesh2, #reviewsh2, #whereWeAre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem; }
+
+.bgImage, .indexBG, .indexBG-capa, .destinationsBG, .destinationsBG-capa, .bannerGreece__capa, .aboutUsBG, .aboutUsBG-capa, .egyptMain__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh; }
+
+/*-------*/
 .toggle {
   display: none; }
 
@@ -19,11 +36,6 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover; }
-
-header {
-  width: 100%;
-  position: absolute;
-  z-index: 2; }
 
 img {
   width: 100%;
@@ -41,14 +53,8 @@ h1 {
   color: #fff; }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font: bold 2.5em "Montserrat", sans-serif;
   color: #216869;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  font-size: 2.5em;
   text-align: center; }
 
 h4 {
@@ -70,8 +76,8 @@ main {
 
 .main__arrow {
   position: absolute;
-  top: 95%;
-  transform: translateY(-95%); }
+  top: 99%;
+  transform: translateY(-99%); }
 
 .main__arrow__img {
   width: 100px;
@@ -90,14 +96,6 @@ main {
   background-color: #302f2f;
   opacity: 0.5;
   mix-blend-mode: overlay; }
-
-@keyframes flechita {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(-35px); }
-  100% {
-    transform: translateY(0); } }
 
 a p {
   font-size: 1rem;
@@ -134,6 +132,9 @@ a p:hover {
 .newsletter__input {
   display: flex;
   margin-right: 5px; }
+
+.newsletter__input::placeholder {
+  color: black; }
 
 .newsletter__button {
   width: 32px;
@@ -216,16 +217,31 @@ footer {
   margin-bottom: 1.2rem; }
 
 /* KEYFRAMES */
+@keyframes flechita {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-35px); }
+  100% {
+    transform: translateY(0); } }
+
 .animate__animated.animate__rotateInUpRight {
   --animate-duration: 1.3s; }
 
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: transparent; }
+
 .navbar {
   display: flex;
-  padding: 2.6rem;
+  padding: 1.5rem;
   margin-right: 2em;
   margin-left: 2em;
   justify-content: space-between;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  font-weight: 500; }
 
 .navbar__ul {
   display: flex; }
@@ -234,24 +250,72 @@ li {
   margin: 0 10px;
   margin-right: 1.5em; }
 
-li:last-child {
-  position: absolute;
-  display: none; }
+/* Change background header */
+.scroll-header {
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15); }
 
-.indexBG {
+.scroll-header .navbar__logo,
+.scroll-header .navbar__ul a {
+  color: #216869; }
+
+.scroll-header .toggle span {
+  background-color: #216869; }
+
+.toggle {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden; }
+
+.toggle span {
   position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh; }
+  width: 26px;
+  height: 3.2px;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: 0.5s;
+  margin-top: -.1rem;
+  margin-left: -1px; }
+
+.toggle span:nth-child(1) {
+  transform: translateY(-15px);
+  width: 20px;
+  margin-left: -4px;
+  margin-top: .2rem; }
+
+.toggle.active span:nth-child(1) {
+  width: 26px;
+  margin: 0px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.130s; }
+
+.toggle span:nth-child(2) {
+  transform: translateY(15px);
+  width: 12px;
+  margin-left: -8px;
+  margin-top: -.4rem; }
+
+.toggle.active span:nth-child(2) {
+  width: 26px;
+  margin: 0px;
+  transform: translateY(0px) rotate(310deg);
+  transition-delay: 0.30s; }
+
+.toggle.active span:nth-child(3) {
+  transform: translateX(60px); }
+
+.toggle {
+  display: none;
+  position: absolute; }
 
 .indexBG-capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(48, 47, 47, 0.3); }
 
 /* PRIMER ARTICULO */
@@ -296,11 +360,10 @@ li:last-child {
 .takeALook {
   position: absolute;
   display: flex;
-  align-self: flex-end;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
-  margin: 1.5rem 0; }
+  z-index: 8;
+  bottom: 20px; }
 
 .takeALook__text {
   display: flex;
@@ -311,24 +374,17 @@ li:last-child {
   text-align: center;
   background-color: transparent;
   text-transform: uppercase;
-  border: 2.3px solid white;
+  border: 2.3px solid #fff;
   border-radius: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: .9em; }
 
-/* SEGUNDO ARTICULO, SE DEFINEN LOS GRIDS */
-#historicalPlacesh2, #ourServicesh2, #reviewsh2, #whereWeAre {
-  font-family: 'Montserrat', sans-serif;
-  color: #216869;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  font-size: 2.5em;
-  text-align: center; }
+#historicalPlacesh2, #ourServicesh2, #reviewsh2 {
+  font: bold 2.5em "Montserrat", sans-serif;
+  color: #216869; }
 
+/* SEGUNDO ARTICULO, SE DEFINEN LOS GRIDS */
 .historicalPlaces {
   display: grid;
   margin-right: 2rem;
@@ -407,20 +463,7 @@ li:last-child {
 .toggleIndex {
   color: #fff; }
 
-.destinationsBG {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh; }
-
 .destinationsBG-capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgba(48, 47, 47, 0.2); }
 
 .destinations__section__grid {
@@ -542,7 +585,7 @@ li:last-child {
   justify-items: center;
   align-items: center; }
 
-.bannerDiscount__text-style1 {
+.bannerDiscount__text-style1, .bannerDiscount__text-style3 {
   color: #fff;
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -559,24 +602,10 @@ li:last-child {
   font-family: 'Montserrat', sans-serif; }
 
 .bannerDiscount__text-style3 {
-  color: #fff;
-  font-size: 2.5rem;
   width: 90%;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  margin: 0 1rem; }
-
-@media (max-width: 430px) {
-  #destinations {
-    font-size: 2.8rem; } }
+  font-weight: 300; }
 
 .bannerGreece__capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
   background-color: rgba(48, 47, 47, 0.2); }
 
@@ -645,8 +674,7 @@ li:last-child {
 
 .bannerGreece__bg {
   width: 100%;
-  height: 370px;
-  filter: blur(0.6px); }
+  height: 370px; }
 
 .bannerGreece__text {
   position: absolute;
@@ -665,7 +693,7 @@ li:last-child {
   width: 200px;
   height: 1.1px; }
 
-.bannerGrecce__text-2 {
+.bannerGrecce__text-2, .bannerGrecce__text-3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 1.3rem;
@@ -673,11 +701,7 @@ li:last-child {
   margin-bottom: .3rem; }
 
 .bannerGrecce__text-3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
   font-size: .9rem;
-  color: #fff;
-  margin-bottom: .3rem;
   margin-top: .5rem; }
 
 .bannerGreece__btn__p {
@@ -757,19 +781,8 @@ li:last-child {
   border-radius: 2px;
   cursor: pointer; }
 
-@media (max-width: 420px) {
-  .request__form {
-    width: 280px; }
-  .request__form__inputs__name, .request__form__inputs__email, .request__form__inputs__textArea, .request__form__inputs__submit {
-    width: 260px; } }
-
-.aboutUsBG {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh; }
+.aboutUsBG-capa {
+  background-color: rgba(48, 47, 47, 0.3); }
 
 .contenedorFlex {
   display: flex;
@@ -785,6 +798,10 @@ li:last-child {
 
 .handpickedHotels {
   width: 80px; }
+
+#whereWeAre {
+  color: #216869;
+  font: bold 2.5em "Montserrat", sans-serif; }
 
 .localizacionGrid {
   display: grid;
@@ -832,15 +849,9 @@ li:last-child {
 
 .egyptMain__bg {
   background-image: url(../pics/pyramids.jpg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   object-fit: cover;
   object-position: center;
-  background-size: cover;
-  object-fit: cover; }
+  background-size: cover; }
 
 .egyptMain__article {
   position: relative;
@@ -920,7 +931,7 @@ li:last-child {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: -.5rem;
+  margin-top: -.7rem;
   margin-bottom: .5rem; }
 
 .egyptArticle__sectionCards {
@@ -1082,7 +1093,7 @@ li:last-child {
   justify-content: center;
   margin-top: 1rem; }
 
-.egyptArticle__bg, .egyptBanner__elements__img {
+.egyptBanner__elements__img {
   filter: blur(1.5px); }
 
 .romeMain__bg {
@@ -1131,51 +1142,49 @@ li:last-child {
 /* MEDIA QUERIES */
 @media (max-width: 500px) {
   .navbar {
-    padding: 1.9rem; }
+    padding: 1.1rem;
+    margin-right: 1rem; }
   h2, #historicalPlacesh2, #ourServicesh2, #reviewsh2, #whereWeAre {
     font-size: 1.8rem; } }
 
 @media (max-width: 1000px) {
   header .navbar__ul {
-    display: none; }
-  header .navbar__ul.active {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 65%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
-    background: #216869;
-    z-index: 1000; }
+    background-color: #fff;
+    z-index: 1000;
+    margin-right: -2000px;
+    transition: 0.8s cubic-bezier(0.4, 0, 1, 1); }
+  header .navbar__ul.active {
+    margin-right: 0;
+    transition: .6s ease-out; }
+  .toggle.active span {
+    background-color: #216869; }
   header .navbar__ul li a {
-    font-size: 1.5em; }
+    font-size: 1em;
+    color: #216869;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif; }
+  header .navbar__ul li:first-child {
+    margin-top: 5rem; }
   header .navbar__ul li {
-    margin-bottom: 1.2rem; }
+    margin-left: 4rem;
+    margin-bottom: 2rem; }
   .toggle {
     display: flex;
     position: relative;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background: url(../pics/menu.png);
-    background-size: 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 10000;
-    margin-right: -2.5rem; }
+    z-index: 10000; }
   .navbar__logo {
-    margin-left: -2.3rem; }
-  .toggle.active {
-    position: fixed;
-    right: .1px;
-    margin-right: 1rem;
-    background: url(../pics/close.png);
-    background-size: 25px;
-    background-position: center;
-    background-repeat: no-repeat; } }
+    margin-left: -2.3rem; } }
 
 @media (max-width: 1000px) {
   .historicalPlaces {
@@ -1235,7 +1244,7 @@ li:last-child {
   .bannerGrecce__text-1 {
     font-size: 2rem;
     margin: 0 .3rem; }
-  .bannerGrecce__text-2 {
+  .bannerGrecce__text-2, .bannerGrecce__text-3 {
     font-size: 1.2rem;
     margin: 0 .3rem; } }
 
@@ -1259,7 +1268,7 @@ li:last-child {
 
 /* DESTINATIONS */
 @media (max-width: 1210px) {
-  .bannerDiscount__text-style1 {
+  .bannerDiscount__text-style1, .bannerDiscount__text-style3 {
     font-size: 2rem;
     width: 80%; }
   .bannerDiscount__text-style2 {
@@ -1267,8 +1276,8 @@ li:last-child {
   .bannerDiscount__text-style3 {
     font-size: 2rem; } }
 
-@media (max-width: 650px) {
-  .bannerDiscount__text-style1 {
+@media (max-width: 740px) {
+  .bannerDiscount__text-style1, .bannerDiscount__text-style3 {
     font-size: 1.5rem;
     width: 80%; }
   .bannerDiscount__text-style2 {
@@ -1276,8 +1285,8 @@ li:last-child {
   .bannerDiscount__text-style3 {
     font-size: 1.5rem; } }
 
-@media (max-width: 450px) {
-  .bannerDiscount__text-style1 {
+@media (max-width: 530px) {
+  .bannerDiscount__text-style1, .bannerDiscount__text-style3 {
     font-size: 1rem;
     width: 100%;
     margin: 0 .5rem; }
@@ -1301,6 +1310,10 @@ li:last-child {
   .destinations__section__grid {
     margin: 0 .7rem; } }
 
+@media (max-width: 430px) {
+  #destinations {
+    font-size: 2.8rem; } }
+
 /* PACKS */
 @media (max-width: 650px) {
   .gridPacks {
@@ -1310,7 +1323,8 @@ li:last-child {
 @media (max-width: 1000px) {
   .localizacionGrid {
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 320px; } }
+    grid-template-rows: 250px 320px;
+    margin-bottom: 5rem; } }
 
 @media (max-width: 530px) {
   #map {
@@ -1332,6 +1346,12 @@ li:last-child {
   .localizacionGrid__text__location__img {
     margin-top: .3rem;
     margin-right: .2rem; } }
+
+@media (max-width: 420px) {
+  .request__form {
+    width: 280px; }
+  .request__form__inputs__name, .request__form__inputs__email, .request__form__inputs__textArea, .request__form__inputs__submit {
+    width: 260px; } }
 
 /* ROME */
 @media (max-width: 1000px) {

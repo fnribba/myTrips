@@ -26,7 +26,7 @@
 </head>
         <body> 
                 <!---- HEADER ----->
-                <header>  
+                <header id="header">  
                         <!---- NAV-BAR ----->
                         <nav class="navbar">
                             <a href="#" class="navbar__logo"><i class='bx bxs-plane-alt animate__animated animate__rotateInUpRight'></i>myTrips</a>
@@ -35,10 +35,12 @@
                                     <li><a href="./sections/destinations.html">Destinations</a></li>
                                     <li><a href="./sections/packs.html">Packs</a></li>
                                     <li><a href="./sections/aboutus.html">About us</a></li>
-                                    <li><a href="#">1</a></li>
-                                    
                                 </ul>
-                                <div class="toggle"></div>
+                                <div class="toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                         </nav>
                 </header>
                 <!---- MAIN ----->
@@ -53,31 +55,32 @@
                     <h2 id="scrollDown">The most beautiful beaches</h2>
                     
                     <section class="beaches"> 
-
-                        <div class="beaches__relative">
-                            <img class="beaches__relative__img" src="pics/borabora.jpg" alt="bora bora">
-                            <div class="beaches__relative__text">
-                                <h3>Bora Bora</h3>
-                                <p class="beaches__relative__country">French Polynesia</p>
+                        
+                            <div class="beaches__relative">
+                                <img class="beaches__relative__img" src="pics/borabora.jpg" alt="bora bora">
+                                <div class="beaches__relative__text">
+                                    <h3>Bora Bora</h3>
+                                    <p class="beaches__relative__country">French Polynesia</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="beaches__relative">
-                            <img class="beaches__relative__img__middle" src="pics/crimea.jpg" alt="crimea">
-                            <div class="beaches__relative__text">
-                                <h3>Crimea</h3>
-                                <p class="beaches__relative__country">Ukraine</p>
+                            <div class="beaches__relative">
+                                <img class="beaches__relative__img" src="pics/tropea.jpg" alt="calabria beach">
+                                <div class="beaches__relative__text">
+                                    <h3>Calabria</h3>
+                                    <p class="beaches__relative__country">Italy</p>
+                                </div>
+                                <a class="takeALook" href="#"><p class="takeALook__text">Take a look</p></a>
                             </div>
-                            <a class="takeALook" href="#"><p class="takeALook__text">Take a look</p></a>
-                        </div>
 
-                        <div class="beaches__relative">
-                            <img class="beaches__relative__img" src="pics/ibiza.jpg" alt="ibiza">
-                            <div class="beaches__relative__text">
-                                <h3>Ibiza</h3>
-                                <p class="beaches__relative__country">Spain</p>
+                            <div class="beaches__relative">
+                                <img class="beaches__relative__img" src="pics/ibiza.jpg" alt="ibiza beach">
+                                <div class="beaches__relative__text">
+                                    <h3>Ibiza</h3>
+                                    <p class="beaches__relative__country">Spain</p>
+                                </div>
                             </div>
-                        </div>
+                      
                     </section>
                 </article>
                 <!---- SEGUNDO ARTICULO ----->
@@ -242,5 +245,6 @@
                 <!-- SCRIPTS -->
                 <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
                 <script src="./scripts.js"></script>
+                
         </body>
 </html>

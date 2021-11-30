@@ -1,64 +1,68 @@
 /* MEDIA QUERIES */
 @media (max-width: 500px) {
     
-    .navbar { padding: 1.9rem;}
+.navbar { 
+    padding: 1.1rem;
+    margin-right: 1rem;}
     
-    h2, #historicalPlacesh2, #ourServicesh2, #reviewsh2, #whereWeAre { font-size: 1.8rem;}
+h2, #historicalPlacesh2, #ourServicesh2, #reviewsh2, #whereWeAre { font-size: 1.8rem;}
 }
     
 @media (max-width: 1000px) {
 
-    header .navbar__ul {
-        display: none;
-    }
-    header .navbar__ul.active {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: $secondary-color;
-        z-index: 1000;
-    }
-    header .navbar__ul li a {
-        font-size: 1.5em;
+header .navbar__ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: $primary-color;
+    z-index: 1000;
+    margin-right: -2000px;
+    transition: .8s cubic-bezier(0.4, 0, 1, 1);
     }
 
-    header .navbar__ul li {
-        margin-bottom: 1.2rem;
-    }
+header .navbar__ul.active {
+    margin-right: 0;
+    transition: .6s ease-out; 
+}
 
-    .toggle {
-        display: flex;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        background: url(../pics/menu.png);
-        background-size: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-        z-index: 10000;
-        margin-right: -2.5rem;
-    }
+.toggle.active span {
+     background-color: $secondary-color;
+}
 
-    .navbar__logo {
-        margin-left: -2.3rem;
-    }
+header .navbar__ul li a {
+    font-size: 1em;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+}
 
-    .toggle.active {
-        position: fixed;
-        right: .1px;
-        margin-right: 1rem;
-        background: url(../pics/close.png);
-        background-size: 25px;
-        background-position: center;
-        background-repeat: no-repeat; 
-    }
+header .navbar__ul li:first-child {
+    margin-top: 5rem;
+}
+
+header .navbar__ul li {
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+
+.toggle {
+    display: flex;
+    position: relative;
+    z-index: 10000;  
+}
+
+.navbar__logo {
+    margin-left: -2.3rem;
+}
 }
 
     
@@ -154,13 +158,13 @@
     .bannerDiscount__text-style3 { font-size: 2rem; }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 740px) {
     .bannerDiscount__text-style1 { font-size: 1.5rem; width: 80%; }
     .bannerDiscount__text-style2 { font-size: 3rem; }
     .bannerDiscount__text-style3 { font-size: 1.5rem; }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 530px) {
     .bannerDiscount__text-style1 { font-size: 1rem; width: 100%; margin: 0 .5rem; }
     .bannerDiscount__text-style2 { font-size: 1.7rem; }
     .bannerDiscount__text-style3 { font-size: 1rem; margin: 0 .5rem; }
@@ -187,6 +191,12 @@
     }
 }
 
+@media (max-width: 430px) {
+    #destinations {
+        font-size: 2.8rem;
+    }
+}
+
 /* PACKS */
 @media (max-width: 650px) {
     .gridPacks { margin: 0 1rem;}
@@ -197,7 +207,9 @@
     .localizacionGrid {
         grid-template-columns: 1fr;
         grid-template-rows: 250px 320px;
+        margin-bottom: 5rem;
     }
+
 }
 
 @media (max-width: 530px) {
@@ -214,6 +226,14 @@
     .localizacionGrid__text__p { font-size: .9rem;}
     .localizacionGrid__text__attention__img { margin-top: .4rem; margin-right: .1rem;}
     .localizacionGrid__text__location__img { margin-top: .3rem; margin-right: .2rem;}
+}
+
+@media (max-width: 420px) {
+    .request__form { width: 280px; }
+
+    .request__form__inputs__name, .request__form__inputs__email, .request__form__inputs__textArea, .request__form__inputs__submit {
+        width: 260px;
+    }
 }
 
 /* ROME */

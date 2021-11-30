@@ -1,30 +1,26 @@
-    .egyptMain {
+.egyptMain {
     width: 100%;
     height: 100vh; }
 
-    .egyptMain__bg {
+.egyptMain__bg {
     background-image: url(../pics/pyramids.jpg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    @extend .bgImage;
     object-fit: cover;
     object-position: center;
     background-size: cover;
-    object-fit: cover;
     }
     
-    .egyptMain__article {
+.egyptMain__article {
     position: relative;
     height: 100vh;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    z-index: 1; }
+    z-index: 1; 
+}
 
-    .egyptMain__h2 {
+.egyptMain__h2 {
     font-size: 5em;
     font-weight: 600;
     color: $primary-color;
@@ -33,16 +29,16 @@
     margin-bottom: 0px;
     display: flex;
     justify-content: start;
-    }
+}
     
-    .egyptMain__p {
+.egyptMain__p {
     color: $primary-color;
     margin-top: 5px;
     margin-left: 2rem;
     text-align: start; 
-    }
+}
 
-    .egyptMain__imgContainer {
+.egyptMain__imgContainer {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -50,21 +46,21 @@
     grid-gap: 5px;
 }
 
-    .egyptMain__imgContainer__hijos {
+.egyptMain__imgContainer__hijos {
     position: relative;
     display: flex;
     justify-content: start;
     align-items: flex-start;
 }
 
-    .egyptMain__img {
+.egyptMain__img {
     width: 250px;
     height: 260px;
     margin: 5px;
     position: relative;
 }
 
-    .egyptMain__imgContainer__hijos__text {
+.egyptMain__imgContainer__hijos__text {
     position: absolute;
     text-align: start;
     margin-top: .5rem;
@@ -75,17 +71,14 @@
     width: 30%;
 }
     
-
-
-
 /* ARTICULO */
-    .egyptArticle {
+.egyptArticle {
     position: relative;
     width: 100%;
     height: 80vh;
 }
     
-    .egyptArticle__look {
+.egyptArticle__look {
     font-size: 2rem;
     color: $secondary-color;
     display: flex;
@@ -96,7 +89,7 @@
     padding-top: 1rem;
     }
     
-    .egyptArticle__tour {
+.egyptArticle__tour {
     font-size: 2rem;
     color: $secondary-color;
     display: flex;
@@ -104,11 +97,11 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: -.5rem;
+    margin-top: -.7rem;
     margin-bottom: .5rem;
-    }
+}
     
-    .egyptArticle__sectionCards {
+.egyptArticle__sectionCards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 230px;
@@ -118,7 +111,7 @@
     grid-gap: 1rem;
 }
 
-    .egyptArticle__sectionCards_card {
+.egyptArticle__sectionCards_card {
     position: relative;
     width: 300px;
     height: 400px;
@@ -129,12 +122,12 @@
     -moz-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
 }
 
-    .egyptArticle__sectionCards_card__img {
+.egyptArticle__sectionCards_card__img {
     width: 300px;
     height: 200px;
     }
     
-    .egyptArticle__sectionCards_card__h5 {
+.egyptArticle__sectionCards_card__h5 {
     font-size: 1em;
     display: flex;
     justify-content: start;
@@ -143,7 +136,7 @@
     margin-top: .5rem;
     }
     
-    .egyptArticle__sectionCards_card__p {
+.egyptArticle__sectionCards_card__p {
     font-size: .8em;
     color: #686868;
     display: flex;
@@ -154,7 +147,7 @@
     margin-right: 1rem;
     }
     
-    .egyptArticle__sectionCards_card__iconFlexEnd {
+.egyptArticle__sectionCards_card__iconFlexEnd {
     display: flex;
     justify-content: flex-start; 
     align-items: flex-end;
@@ -164,16 +157,16 @@
     font-size: .9em;
     margin-bottom: .3em; }
 
-    .egyptArticle__sectionCards_card__iconFlexEnd__img {
+.egyptArticle__sectionCards_card__iconFlexEnd__img {
     width: 20px;
     height: 20px;
     margin-right: .5rem; }
 
-    .egyptArticle__sectionCards_card__iconFlexEnd__h5 {
+.egyptArticle__sectionCards_card__iconFlexEnd__h5 {
     font-weight: 400;
     color: #686868;}
 
-    .egyptArticle__sectionCards_card__iconFlexEnd2 {
+.egyptArticle__sectionCards_card__iconFlexEnd2 {
     display: flex;
     justify-content: flex-end;
     position: absolute;
@@ -183,7 +176,7 @@
     font-size: .9em;
     margin-bottom: .3em; }
 
-    .egyptArticle__sectionCards_card__stars {
+.egyptArticle__sectionCards_card__stars {
     width: 16px;
     height: 16px;
     position: absolute;
@@ -192,10 +185,10 @@
     margin-left: .5rem;
     margin-top: .3rem; }
 
-    .egyptArticle__sectionCards_card__stars__img {
+.egyptArticle__sectionCards_card__stars__img {
     margin-right: .5rem;}
 
-    .egyptArticle__sectionCards_card__icons {
+.egyptArticle__sectionCards_card__icons {
     width: 20px;
     height: 20px;
     position: absolute;
@@ -203,10 +196,10 @@
     top: 44%;
     margin-left: 1rem; }
 
-    .egyptArticle__sectionCards_card__icons__img {
+.egyptArticle__sectionCards_card__icons__img {
     margin-right: 1rem;}
 
-    .egyptArticle__sectionCards_card__button {
+.egyptArticle__sectionCards_card__button {
     width: 80px;
     height: 25.2px;
     position: absolute;
@@ -228,17 +221,17 @@
     justify-content: center;
     align-items: center; }
 
-    .egyptBanner__elements {
+.egyptBanner__elements {
     position: absolute;
     color: $primary-color; }
 
-    .egyptBanner__elements__img {
+.egyptBanner__elements__img {
     width: 100%;
     height: 400px;
     position: absolute;
     z-index: 0;}
 
-    .egyptBanner__elements__discount {
+.egyptBanner__elements__discount {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,7 +239,7 @@
     text-align: center;
     margin: 0 1rem;}
     
-    .egyptBanner__elements__text {
+.egyptBanner__elements__text {
     display: flex;
     justify-content: center;
     font-weight: 500;
@@ -254,7 +247,7 @@
     text-align: center;
     margin: 0 1rem;}
     
-    .egyptBanner__elements__btn__text {
+.egyptBanner__elements__btn__text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,13 +260,13 @@
     letter-spacing: 0;
     font-weight: 600;}
     
-    .egyptBanner__elements__btn {
+.egyptBanner__elements__btn {
     display: flex;
     justify-content: center;
     margin-top: 1rem;}
 
 
-.egyptArticle__bg, .egyptBanner__elements__img {
+.egyptBanner__elements__img {
     filter: blur(1.5px);
 }
 

@@ -1,17 +1,99 @@
-    .navbar { 
+header { 
+    width: 100%; 
+    position: fixed; 
+    z-index: 2;
+    background-color: transparent;
+}
+
+.navbar { 
     display: flex;
-    padding: 2.6rem;
+    padding: 1.5rem;
     margin-right: 2em;
     margin-left: 2em;
     justify-content: space-between;
-    font-size: 1.2rem; } 
+    font-size: 1.2rem;
+    font-weight: 500; } 
     
-    .navbar__ul { display: flex; }
+.navbar__ul { display: flex; }
 
-    li { 
+li { 
     margin: 0 10px;
     margin-right: 1.5em; }
         
-    li:last-child {
+
+/* Change background header */
+.scroll-header {
+    background-color: $primary-color;
+    box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.scroll-header .navbar__logo,
+.scroll-header .navbar__ul a {
+    color: $secondary-color;
+}
+
+.scroll-header .toggle span {
+    background-color: $secondary-color;
+}
+
+.toggle {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.toggle span {
     position: absolute;
-    display: none;}
+    width: 26px;
+    height: 3.2px;
+    background-color: $primary-color;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-top: -.1rem;
+    margin-left: -1px;
+    
+}
+
+.toggle span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 20px;
+    margin-left: -4px;
+    margin-top: .2rem;
+}
+
+.toggle.active span:nth-child(1) {
+    width: 26px;
+    margin: 0px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 0.130s;
+}
+
+.toggle span:nth-child(2) {
+    transform: translateY(15px);
+    width: 12px;
+    margin-left: -8px;
+    margin-top: -.4rem;
+}
+
+.toggle.active span:nth-child(2) {
+    width: 26px;
+    margin: 0px;
+    transform: translateY(0px) rotate(310deg);
+    transition-delay: 0.30s;
+}
+
+.toggle.active span:nth-child(3) {
+    transform: translateX(60px);
+}
+
+.toggle {
+    display: none;
+    position: absolute;
+}

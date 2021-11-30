@@ -1,9 +1,5 @@
-
 .bannerGreece__capa {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+@extend .bgImage;
 height: 100%;
 background-color:rgba(48, 47, 47, 0.2);
 
@@ -71,9 +67,6 @@ background-color:rgba(48, 47, 47, 0.2);
     margin-top: 0.1rem;
 }
 
-
-
-
 /* BANNER */
 .bannerGreece {
     position: relative;
@@ -86,7 +79,6 @@ background-color:rgba(48, 47, 47, 0.2);
 .bannerGreece__bg {
     width: 100%;
     height: 370px;
-    filter: blur(.6px);
 }
 
 .bannerGreece__text {
@@ -118,16 +110,13 @@ background-color:rgba(48, 47, 47, 0.2);
 }
 
 .bannerGrecce__text-3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    @extend .bannerGrecce__text-2; 
     font-size: .9rem;
-    color: $primary-color;
-    margin-bottom: .3rem;
     margin-top: .5rem;
 }
 
 .bannerGreece__btn__p {
-    background-color: #406194;
+    background-color: $terciary-color;
     width: 150px;
     height: 27px;
     text-transform: uppercase;
@@ -149,7 +138,7 @@ background-color:rgba(48, 47, 47, 0.2);
     
 }
 
-.bannerGreece__btn__p:hover { background-color: #4572b9; }
+.bannerGreece__btn__p:hover { background-color: $terciary-color-hover }
 
 /* REQUEST A DESTINATION */
 .request {
@@ -210,14 +199,5 @@ background-color:rgba(48, 47, 47, 0.2);
     border-radius: 2px;
     cursor: pointer;
 }
-
-@media (max-width: 420px) {
-    .request__form { width: 280px; }
-
-    .request__form__inputs__name, .request__form__inputs__email, .request__form__inputs__textArea, .request__form__inputs__submit {
-        width: 260px;
-    }
-}
-
 
 
