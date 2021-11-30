@@ -8,16 +8,14 @@
 }
 
 .contenedorFlex { 
-    display: flex;
-    justify-content: center;
-    text-align: center; }
+    @include display-justify(flex, center);
+    text-align: center;
+    margin: 0 .8rem; }
 
 .hijos { 
     margin-right: .5rem; }
 
-.hijos__flex {
-    width: 60px;
-    height: 60px; }
+.hijos__flex { @include size(60px, 60px); }
 
 .handpickedHotels { width: 80px;}
 
@@ -46,31 +44,20 @@
     text-align: center;
 }
 
-#map {
-    width: 500px;
-    height: 400px;
-}
+#map { @include size(500px, 400px); }
 
-.localizacionGrid__text__location { 
-    display: flex; 
-    justify-content: center;
-}
+.localizacionGrid__text__location { @include display-justify(flex, center); }
 
 .localizacionGrid__text__location__img {
-    width: 32px;
-    height: 40px;
+    @include size(32px, 40px);
     margin-top: .7rem;
     margin-right: .7rem;
 }
 
-.localizacionGrid__text__attention {
-    display: flex;
-    justify-content: center;
-}
+.localizacionGrid__text__attention { @include display-justify(flex, center); }
 
 .localizacionGrid__text__attention__img {
-    width: 40px;
-    height: 40px;
+    @include size(40px, 40px);
     margin-top: .8rem;
     margin-right: .7rem;
 }

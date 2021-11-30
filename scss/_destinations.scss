@@ -14,25 +14,20 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 400px);
     grid-gap: 1rem;
+    row-gap: 2.5rem;
     justify-items: center; }
 
 .destinations__section__grid__card {
     position: relative;
-    width: 300px;
-    height: 400px;
+    @include size(300px, 400px);
     background-color: $primary-color;
-    box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
-    -webkit-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
-    -moz-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10); }
-
-.destinations__section__grid__card__img {
-    height: 200px;
-    width: 300px;
+    box-shadow: $box-shadow;
 }
 
+.destinations__section__grid__card__img { @include size(300px, 200px); }
+
 .destinations__section__grid__card__texticon {
-    display: flex;
-    justify-content: start;
+    @include display-justify(flex, start);
     text-align: start;
     margin-left: 1rem;
     margin-top: .5rem;
@@ -46,15 +41,13 @@
 }
 
 .destinations__section__grid__card__texticon__img {
-    width: 16px;
-    height: 20px;
+    @include size(16px, 20px);
     margin-right: .3rem;
 }
 
 .destinations__section__grid__card__p {
     font-size: .8em;
-    display: flex;
-    justify-content: start;
+    @include display-justify(flex, start);
     text-align: start;
     margin-left: 1rem;
     font-weight: 400;
@@ -63,8 +56,7 @@
 }
 
 .destinations__section__grid__card__stars {
-    width: 13px;
-    height: 13px;
+    @include size(13px, 13px);
     display: flex;
     margin-left: 1rem;
     margin-top: .6rem; }
@@ -74,8 +66,7 @@
 }
 
 .destinations__section__grid__card__p__price {
-    display: flex;
-    justify-content: start;
+    @include display-justify(flex, start);
     text-align: start;
     margin: .7rem 1rem;
 }
@@ -97,10 +88,8 @@
 
 .destinations__section__grid__card__btn {
     background-color: $secondary-color;
-    width: 100px;
-    height: 28px;
-    display: flex;
-    justify-content: center; 
+    @include size (100px, 28px);
+    @include display-justify(flex, center);
     align-items: center;
     position: absolute;
     right: 50%;
@@ -124,12 +113,10 @@
 
 /* BANNER DISCOUNT */
 .bannerDiscount {
-    width: 100%;
-    height: 150px;
+    @include size(100%, 150px);
     background-image: linear-gradient(to bottom right, #327e7a, #88c9c3);
     margin-top: 1.8rem;
-    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28); 
-    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+    box-shadow: $box-shadow;
 }
 
 .bannerDiscount__text {
@@ -161,7 +148,7 @@
 }
 
 .bannerDiscount__text-style3 {
-   @extend .bannerDiscount__text-style1;
+    @extend .bannerDiscount__text-style1;
     width: 90%;
     font-weight: 300;
 }

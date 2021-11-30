@@ -17,16 +17,14 @@ background-color:rgba(48, 47, 47, 0.2);
 
 .gridPacks__hijos__gc {
     position: relative;
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
     align-items: center;
     grid-column: 1 / 3;
 }
 
 .gridPacks__hijos {
     position: relative;
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
     align-items: center;
 }
 
@@ -45,18 +43,14 @@ background-color:rgba(48, 47, 47, 0.2);
 }
 
 .gridPacks__hijos__text__btn {
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
 }
 
 .gridPacks__hijos__text__btn__h3 {
-    background-color: $secondary-color;
-    color: $primary-color;
-    width: 135px;
-    height: 22px;
+    @include color($primary-color, $secondary-color);
+    @include size(135px, 22px);
     text-align: center;
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -72,13 +66,12 @@ background-color:rgba(48, 47, 47, 0.2);
     position: relative;
     margin: 4rem 0;
     height: 370px;
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
+    box-shadow: $box-shadow;
 }
 
 .bannerGreece__bg {
-    width: 100%;
-    height: 370px;
+    @include size(100%, 370px);
 }
 
 .bannerGreece__text {
@@ -97,8 +90,7 @@ background-color:rgba(48, 47, 47, 0.2);
 }
 
 .bannerGreece__line {
-    width: 200px;
-    height: 1.1px;
+    @include size(200px, 1.3px);
 }
 
 .bannerGrecce__text-2 {
@@ -117,22 +109,19 @@ background-color:rgba(48, 47, 47, 0.2);
 
 .bannerGreece__btn__p {
     background-color: $terciary-color;
-    width: 150px;
-    height: 27px;
+    @include size(150px, 27px);
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    display: flex;
+    @include display-justify(flex, center);
     text-align: center;
     align-items: center;
-    justify-content: center;
     transition: background-color 1s ease;
     border-radius: 3px;
 }
 
 .bannerGreece__btn {
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
     margin-top: .5rem;
     border-radius: 3px;
     
@@ -142,16 +131,12 @@ background-color:rgba(48, 47, 47, 0.2);
 
 /* REQUEST A DESTINATION */
 .request {
-    display: flex;
-    justify-content: center;
+    @include display-justify(flex, center);
 }
 
 .request__form {
-    width: 380px;
-    height: 420px;
-    box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
-    -webkit-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
-    -moz-box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.10);
+    @include size(380px, 420px);
+    box-shadow: $box-shadow;
     color: $primary-color;
     display: inline-block;
     justify-content: center;
@@ -167,8 +152,7 @@ background-color:rgba(48, 47, 47, 0.2);
 }
 
 .request__form__inputs__name, .request__form__inputs__email {
-    width: 340px;
-    height: 24px;
+    @include size(340px, 24px);
     background-color: #989898;
     border: 0;
     margin-bottom: 1.3rem;
@@ -191,11 +175,9 @@ background-color:rgba(48, 47, 47, 0.2);
     font-size: .7rem;}
 
 .request__form__inputs__submit {
-    width: 340px;
-    background-color: $secondary-color;
+    @include size(340px, 30px);
+    @include color($primary-color, $secondary-color);
     border: 0;
-    color: $primary-color;
-    height: 30px;
     border-radius: 2px;
     cursor: pointer;
 }

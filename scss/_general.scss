@@ -11,12 +11,14 @@ $secondary-color-hover: #378d8f;
 $terciary-color: #406194;
 $terciary-color-hover: #4572b9;
 $title-font: bold 2.5em 'Montserrat', sans-serif;
+$box-shadow: -2px 3px 9px 0px rgba(0,0,0,0.20);
+/*-----*/
 
 /* EXTEND */
 .titleCenter {
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
@@ -30,6 +32,23 @@ $title-font: bold 2.5em 'Montserrat', sans-serif;
     height: 100vh;
 }
 /*-------*/ 
+
+/* MIXINS */
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin color($color, $bg-color) {
+    color: $color;
+    background-color: $bg-color;
+}
+
+@mixin display-justify($display, $justify) {
+    display: $display;
+    justify-content: $justify;
+}
+/*------*/
 
 .toggle {display: none;}
 
