@@ -425,18 +425,16 @@ li {
 
 /* TERCER ARTICULO, SERVICES */
 .servicesContainer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 200px 200px;
   text-align: center;
-  flex-wrap: wrap; }
+  place-content: center; }
 
-.containerFlex {
-  display: flex; }
+.servicesContainer__hijos {
+  margin: 1rem 1.6rem; }
 
-.servicesHijos {
-  margin: 2rem; }
-
-.servicesHijos__img {
+.servicesContainer__hijos__img {
   width: 60px;
   height: 60px; }
 
@@ -791,10 +789,10 @@ li {
   text-align: center;
   margin: 0 .8rem; }
 
-.hijos {
-  margin-right: .5rem; }
+.contenedorFlex__hijos {
+  margin: 1.3rem 2rem; }
 
-.hijos__flex {
+.contenedorFlex__hijos__img {
   width: 60px;
   height: 60px; }
 
@@ -1467,15 +1465,15 @@ li {
     font-size: 1.2rem;
     margin: 0 .3rem; } }
 
-@media (max-width: 1200px) {
-  .contenedorFlex {
-    flex-wrap: wrap; }
-  .hijos {
-    margin-bottom: 5rem; } }
+@media (max-width: 900px) {
+  .servicesContainer {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px 200px 200px; } }
 
-@media (max-width: 730px) {
-  .containerFlex {
-    flex-wrap: wrap; } }
+@media (max-width: 550px) {
+  .servicesContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 190px); } }
 
 @media (max-width: 600px) {
   .footer_df {
@@ -1539,6 +1537,10 @@ li {
     margin: 0 1rem; } }
 
 /* ABOUT US */
+@media (max-width: 1200px) {
+  .contenedorFlex {
+    flex-wrap: wrap; } }
+
 @media (max-width: 1000px) {
   .localizacionGrid {
     grid-template-columns: 1fr;

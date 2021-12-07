@@ -112,16 +112,16 @@
 
 /* TERCER ARTICULO, SERVICES */
 .servicesContainer {
-    @include display-justify(flex, center);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 200px 200px;
     text-align: center;
-    flex-wrap: wrap; }
+    place-content: center;
+}
 
-.containerFlex {
-    display: flex; }
+.servicesContainer__hijos { margin: 1rem 1.6rem }
 
-.servicesHijos { margin: 2rem }
-
-.servicesHijos__img { @include size(60px, 60px); }
+.servicesContainer__hijos__img { @include size(60px, 60px); }
 
 /* CUARTO ARTICULO, REVIEWS */
 .reviews__div {

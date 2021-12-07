@@ -12,10 +12,10 @@
     text-align: center;
     margin: 0 .8rem; }
 
-.hijos { 
-    margin-right: .5rem; }
+.contenedorFlex__hijos { 
+    margin: 1.3rem 2rem; }
 
-.hijos__flex { @include size(60px, 60px); }
+.contenedorFlex__hijos__img { @include size(60px, 60px); }
 
 .handpickedHotels { width: 80px;}
 
